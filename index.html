@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <h1>HTML Form for playing Snake Water and Gun</h1>
+    <form onsubmit = "confirmRedirect(event)">
+        <div>
+            <label for="Name">Name</label>
+             <input id ="Name" type = "text" placeholder = "Enter your Name">
+        </div>
+        <div>
+            <label for="Phone">Phone</label>
+             <input id ="Phone" type = "Phone" placeholder = "Enter your Phone">
+        </div>
+        <div>
+            <label for="Email">Email</label>
+             <input id ="Email" type = "Email" placeholder = "Enter your Email">
+        </div>
+        <div>
+            <label for="dob">dob</label>
+             <input id ="dob" type = "date" required>
+        </div>
+        <div>
+            <label for="gender">Gender</label>
+             <select id ="gender" required>
+             <option value="" disabled selected>Select gender</option>
+             <option value="Male">Male</option>
+             <option value="Female">Female</option>
+             <option value="Other">Other</option>
+             </select>
+        </div>
+        <p>Do you Want To play The Snake Water and Gun Game</p>
+        <label for="Choice">Choice</label>
+             <select id ="Choice" required>
+        <option value="" disabled selected>Select Choice</option>
+             <option value="Yes">Yes</option>
+             <option value="No">No</option>
+             </select>
+<button type="Submit">Submit</button>
+    </form>
+     <script>
+    function confirmRedirect(event) {
+      event.preventDefault(); 
+      
+     
+      let choice = document.getElementById("Choice").value;
+      
+      if (choice === "Yes") {
+        
+        window.open("6.html", "_blank");
+      } else if(choice === "No") {
+        
+         window.open("5.html", "_blank");
+      }
+      else{
+        alert("Please Select any one");
+      }
+    }
+  </script>
+
+
+</body>
+</html>
